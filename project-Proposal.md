@@ -97,14 +97,19 @@ public class HostelFeePaymentSystem {
             scanner.nextLine();  // Consume newline
 
             switch (choice) {
-                case 1 -> payHostelFee();
-                case 2 -> viewPaymentHistory();
-                case 3 -> {
+                case 1:
+                    payHostelFee();
+                    break;
+                case 2:
+                    viewPaymentHistory();
+                    break;
+                case 3:
                     System.out.println("Logging out...");
                     currentStudent = null;
                     return;
-                }
-                default -> System.out.println("Invalid option. Please try again.");
+                default:
+                    System.out.println("Invalid option. Please try again.");
+                    break;
             }
         }
     }
